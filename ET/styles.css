@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url('NTIC.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* Styles pour l'en-tête */
+header {
+    
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Styles pour le conteneur principal */
+.content {
+    max-width: 1000px;
+    height: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+select {
+    margin-top: 20px;
+    border: none;
+    background-color: rgb(255, 255, 255, 0.5);
+    animation: move infinite 6s;
+}
+
+option {
+    background-color: rgb(255, 255, 255, 0.5);
+    border: none;
+}
+
+select option:checked {
+    background-color:rgb(200, 126, 77);
+    color: white;
+    font-weight: bold;
+}
+
+@keyframes move {
+    0%   {box-shadow: 0 2px 25px rgb(200, 126, 77);}
+    25%  {box-shadow: 0 2px 20px white;}
+    50%  {box-shadow: 0 2px 25px rgb(200, 126, 77);}
+    75%  {box-shadow: 0 2px 20px white;}
+    100% {box-shadow: 0 2px 25px rgb(200, 126, 77);}
+}
+  
+/* Styles pour la sélection de groupe */
+.group-selection {
+    text-align: center;
+}
+
+/* Styles pour le sélecteur de groupe */
+#groupSelect {
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+/* Styles pour le bouton "Afficher l'Emploi du Temps" */
+#showSchedule {
+    font-size: 16px;
+    padding: 5px 10px;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Styles pour le conteneur de l'emploi du temps (initiallement caché) */
+.schedule {
+    display: none;
+    margin-top: 20px;
+    background-color: rgb(255, 255, 255, 0.8);
+}
+
+/* Apply box shadow and border radius to the schedule table */
+#scheduleTable {
+    width: 100%;
+    height: 400px;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    animation: move infinite 6s;
+}
+
+#scheduleTable td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+#scheduleTable tr:first-child {
+    background-color:rgb(200, 126, 77); /* Brown background color for days */
+    color: #fff;
+}
+
+/* Style for the first column (times) */
+#scheduleTable td:first-child {
+    background-color: white; /* Brown background color for times */
+    color: black;
+}
